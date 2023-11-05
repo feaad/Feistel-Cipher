@@ -29,4 +29,3 @@ def xor_op(a: str, b: str) -> str:
     return result 
     
     
-and_op('0011', '1101')

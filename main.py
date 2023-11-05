@@ -1,5 +1,6 @@
-import logic_gate as logic
-def encrypt(plaintext: str, bit_op: str, key: str):
+import utils.logic_gate as logic
+def encrypt(plaintext: str, bit_op: str, key: str) -> str:
+    cipher_text = ''
     if len(plaintext) % 2 != 0:
         print("Input must even")
     else:
@@ -8,8 +9,9 @@ def encrypt(plaintext: str, bit_op: str, key: str):
         
         encoder(bit_op, key, right)
         # print(right)
+    return cipher_text
+   
         
-
 def encoder(bit_op: str, key: str, right: str):
     if bit_op == 'AND':
         encode = logic.and_op(key, right) 
@@ -20,8 +22,3 @@ def encoder(bit_op: str, key: str, right: str):
     elif bit_op == 'XOR':
         encode = logic.xor_op(key, right) 
         print(encode)
-        
-        
-
-
-encrypt('10010011', 'AND', '1101')
