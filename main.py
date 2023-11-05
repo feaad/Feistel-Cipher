@@ -14,6 +14,14 @@ def encoder(bit_op: str, key: str, right: str):
     if bit_op == 'AND':
         encode = logic.and_op(key, right) 
         print(encode)
+    elif bit_op == 'OR':
+        encode = logic.or_op(key, right) 
+        print(encode)
+    elif bit_op == 'XOR':
+        encode = logic.xor_op(key, right) 
+        print(encode)
+        
+        
 
 
 encrypt('10010011', 'AND', '1101')
