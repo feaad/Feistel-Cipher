@@ -25,5 +25,5 @@ def test_encoder():
     that the result is equal to a given expected output.
 
     """
-    result = main.encrypt("10010011", "AND", "1101")
-    assert result == "00111000"
+    result = main.encrypt("10010011", "XOR", "1101")
+    assert result == "00110111"
