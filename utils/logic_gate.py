@@ -14,7 +14,7 @@ def or_op(a: str, b: str) -> str:
 
     result = ""
     for i in range(len(a)):
-        result += str(int(a[i] or b[i]))
+        result += str(int(int(a[i]) or int(b[i])))
     return result
 
 
