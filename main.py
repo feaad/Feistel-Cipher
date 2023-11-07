@@ -17,6 +17,7 @@ import utils.logic_gate as logic
 
 
 def encrypt(plaintext: str, bit_op: str, key: str):
+    right_one = ''
     cipher_text = ''
     if len(plaintext) % 2 != 0:
         print("Input must even")
@@ -25,9 +26,8 @@ def encrypt(plaintext: str, bit_op: str, key: str):
         right = plaintext[int(len(plaintext)/2):]
         
         end = encoder(bit_op, key, right)
-        cipher_text = xor_left('1001', '1110')
-    
-    print(cipher_text)
+        right_one = xor_left(end, left)
+    print(right_one)
    
         
 def encoder(bit_op: str, key: str, right: str):
@@ -43,9 +43,11 @@ def encoder(bit_op: str, key: str, right: str):
     
     
 def xor_left(left: str, encode: str):
-    return logic.xor_op(encode, left)
+    xor = logic.xor_op(encode, left)
+    return xor
     
 
 
 encrypt("10010011", "AND", "1101")
 # xor_left('1001', '1110')
+# encoder("AND", '0011', '1101')
