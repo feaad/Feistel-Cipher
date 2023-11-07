@@ -21,9 +21,21 @@ import main
 def test_encoder():
     """
     The function `test_encoder()` tests the `encrypt()` function by passing
-    in a binary string, an operation, and another binary string, and asserts
+    in a binary string, an operation, and a key(binary string), and asserts
     that the result is equal to a given expected output.
 
     """
-    result = main.encrypt("10010011", "XOR", "1101")
-    assert result == "00110111"
+    result = main.encrypt("10010011", "OR", "1101")
+    assert result == "00110110"
+
+
+def test_decryter():
+    """
+    The function `test_decryter()` tests the `decrypt()` function by passing
+    in a binary string, an operation, and a key(binary string), and asserts
+    that the result is equal to a given expected output.
+
+    """
+
+    result = main.decrypt("10010011", "OR", "1101")
+    assert result == "11101001"

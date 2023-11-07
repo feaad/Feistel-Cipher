@@ -36,7 +36,7 @@ def decrypt(cipher_text: str, bit_op: str, key: str) -> str:
     """The function decrypt() takes in a key and a logic operand to decrypt
     binary code"""
     if len(cipher_text) % 2 != 0:
-        print("Ciphertext should be even")
+        print("Cipher text should be even")
     else:
         left_one = cipher_text[: int(len(cipher_text) // 2)]
         right_one = cipher_text[int(len(cipher_text) // 2) :]
