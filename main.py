@@ -5,7 +5,7 @@ File Created: Friday, 3rd November 2023 10:19:15 PM
 Author: Frances Antwi-Donkor
 Email: tassie515@gmail.com
 Version: 1.0
-Brief: 
+Brief: Feistel Cipher to decrypt and encrypt binary bits
 -----
 Last Modified: Sunday, 5th November 2023 8:27:34 PM
 Modified By: Frances Antwi-Donkor
